@@ -19,17 +19,15 @@ const MAXB = 14;
 
 let ans = 0;
 for (const game in gameObj) {
-  let val = gameObj[game]; // 4 blue, 16 green, 2 red; 5 red, 11 blue, 16 green; 9 green, 11 blue; 10 blue, 6 green, 4 red
-  let subsets = val.split(";"); // ["4 blue, 16 green, 2 red", "5 red, 11 blue, 16 green","9 green, 11 blue","10 blue, 6 green, 4 red"]
+  let val = gameObj[game];
+  let subsets = val.split(";");
   let maxBlue = 0;
   let maxGreen = 0;
   let maxRed = 0;
   subsets.forEach((subset: string) => {
-    // subset -> "4 blue, 16 green, 2 red"
-    let items = subset.split(", "); // ["4 blue", "16 green", "2 red"]
+    let items = subset.split(", ");
     items.forEach((item) => {
-      // item => 4 blue
-      let [count, color] = item.trim().split(" "); // count = 4, color = blue
+      let [count, color] = item.trim().split(" ");
       let newCount = parseInt(count);
       if (color === "blue") {
         maxBlue = Math.max(maxBlue, newCount);
