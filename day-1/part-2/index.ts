@@ -1,4 +1,4 @@
-const fs = require("fs");
+import fs from "fs";
 
 const data = fs.readFileSync("../input.txt", "utf-8");
 const arr = data.replace("\t", " ").split("\r\n");
@@ -9,15 +9,15 @@ for (let i = 0; i < arr.length; i++) {
   let newStr = "";
   for (let j = 0; j < str.length; j++) {
     newStr += str[j];
-    if (newStr.indexOf("one") != -1) newStr = newStr.replace("one", 1);
-    if (newStr.indexOf("two") != -1) newStr = newStr.replace("two", 2);
-    if (newStr.indexOf("three") != -1) newStr = newStr.replace("three", 3);
-    if (newStr.indexOf("four") != -1) newStr = newStr.replace("four", 4);
-    if (newStr.indexOf("five") != -1) newStr = newStr.replace("five", 5);
-    if (newStr.indexOf("six") != -1) newStr = newStr.replace("six", 6);
-    if (newStr.indexOf("seven") != -1) newStr = newStr.replace("seven", 7);
-    if (newStr.indexOf("eight") != -1) newStr = newStr.replace("eight", 8);
-    if (newStr.indexOf("nine") != -1) newStr = newStr.replace("nine", 9);
+    if (newStr.indexOf("one") != -1) newStr = newStr.replace("one", "1");
+    if (newStr.indexOf("two") != -1) newStr = newStr.replace("two", "2");
+    if (newStr.indexOf("three") != -1) newStr = newStr.replace("three", "3");
+    if (newStr.indexOf("four") != -1) newStr = newStr.replace("four", "4");
+    if (newStr.indexOf("five") != -1) newStr = newStr.replace("five", "5");
+    if (newStr.indexOf("six") != -1) newStr = newStr.replace("six", "6");
+    if (newStr.indexOf("seven") != -1) newStr = newStr.replace("seven", "7");
+    if (newStr.indexOf("eight") != -1) newStr = newStr.replace("eight", "8");
+    if (newStr.indexOf("nine") != -1) newStr = newStr.replace("nine", "9");
   }
   arr[i] = newStr;
 }
