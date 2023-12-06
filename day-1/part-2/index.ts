@@ -22,8 +22,6 @@ for (let i = 0; i < arr.length; i++) {
   arr[i] = newStr;
 }
 
-console.log(arr);
-
 for (let i = 0; i < arr.length; i++) {
   arr[i] = arr[i].replace(/\D/g, "");
 }
