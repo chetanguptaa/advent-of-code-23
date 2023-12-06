@@ -1,6 +1,6 @@
 import fs from "fs";
 
-const data: string = fs.readFileSync("./input.txt", "utf-8");
+const data: string = fs.readFileSync("../input.txt", "utf-8");
 const arr: string[] = data.split("\r\n");
 arr.pop();
 
